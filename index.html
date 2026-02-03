@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Pago | Nexus</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .payment-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        /* Resumen */
+        .summary {
+            background: #0f172a;
+            color: #ffffff;
+            padding: 40px;
+        }
+
+        .summary h1 {
+            margin: 0 0 10px;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        .summary p {
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        .summary-box {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .summary-total {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Formulario */
+        .payment-form {
+            padding: 40px;
+        }
+
+        .payment-form h2 {
+            margin-bottom: 25px;
+            color: #0f172a;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 6px;
+            color: #334155;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #2563eb;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .secure {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        @media (max-width: 768px) {
+            .payment-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="payment-container">
+
+        <!-- Resumen -->
+        <div class="summary">
+            <h1>NEXUS</h1>
+            <p>Portal de pago seguro</p>
+
+            <div class="summary-box">
+                <div class="summary-row">
+                    <span>Servicio Nexus Pro</span>
+                    <span>49,99 €</span>
+                </div>
+                <div class="summary-row">
+                    <span>IVA (21%)</span>
+                    <span>10,50 €</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Total</span>
+                    <span>60,49 €</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="payment-form">
+            <h2>Datos de pago</h2>
+
+            <form>
+                <label>Nombre del titular</label>
+                <input type="text" placeholder="Nombre completo">
+
+                <label>Número de tarjeta</label>
+                <input type="text" placeholder="1234 5678 9012 3456">
+
+                <div class="row">
+                    <div>
+                        <label>Fecha de expiración</label>
+                        <input type="text" placeholder="MM/AA">
+                    </div>
+                    <div>
+                        <label>CVV</label>
+                        <input type="password" placeholder="123">
+                    </div>
+                </div>
+
+                <button type="submit">Pagar ahora</button>
+            </form>
+
+            <div class="secure">
+                🔒 Pago seguro cifrado SSL
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
