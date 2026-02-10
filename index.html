@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Pago | Nexus</title>
+
     <style>
         * {
             box-sizing: border-box;
@@ -32,24 +33,23 @@
 
         /* Resumen */
         .summary {
-            background: #0000FF;
+            background: #0000ff;
             color: #ffffff;
             padding: 40px;
         }
 
-        .summary h1 {
-            margin: 0 0 10px;
-            font-size: 28px;
-            letter-spacing: 1px;
+        .summary img {
+            width: 160px;
+            margin-bottom: 20px;
         }
 
         .summary p {
-            opacity: 0.8;
+            opacity: 0.85;
             margin-bottom: 30px;
         }
 
         .summary-box {
-            border-top: 1px solid rgba(255,255,255,0.2);
+            border-top: 1px solid rgba(255,255,255,0.3);
             padding-top: 20px;
         }
 
@@ -82,7 +82,8 @@
             color: #334155;
         }
 
-        input {
+        input[type="text"],
+        input[type="password"] {
             width: 100%;
             padding: 12px;
             margin-bottom: 20px;
@@ -97,10 +98,28 @@
             gap: 15px;
         }
 
+        .terms {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .terms input {
+            margin-right: 8px;
+        }
+
+        .terms a {
+            color: #0000ff;
+            text-decoration: none;
+        }
+
+        .terms a:hover {
+            text-decoration: underline;
+        }
+
         button {
             width: 100%;
             padding: 14px;
-            background: #0000FF;
+            background: #0000ff;
             color: #ffffff;
             border: none;
             border-radius: 6px;
@@ -110,7 +129,7 @@
         }
 
         button:hover {
-            background: #0000CC;
+            background: #0000cc;
         }
 
         .secure {
@@ -127,72 +146,20 @@
         }
     </style>
 </head>
+
 <body>
 
-    <div class="payment-container">
+<div class="payment-container">
 
-        <!-- Resumen -->
-        <div class="summary">
-            <img src="BLANCONEXUSLOGOTIPO (1).png" alt="Logo Nexus" style="width: 160px; margin-bottom: 20px;">
+    <!-- Resumen -->
+    <div class="summary">
+        <img src="logo-nexus.png" alt="Logo Nexus">
+        <p>Portal de pago seguro</p>
 
-            <p>Portal de pago seguro</p>
-
-            <div class="summary-box">
-                <div class="summary-row">
-                    <span>Servicio Nexus Pro</span>
-                    <span>165,28 €</span>
-                </div>
-                <div class="summary-row">
-                    <span>IVA (21%)</span>
-                    <span>34,71 €</span>
-                </div>
-                <div class="summary-row summary-total">
-                    <span>Total</span>
-                    <span>199,99 €</span>
-                </div>
+        <div class="summary-box">
+            <div class="summary-row">
+                <span>Servicio Nexus Pro</span>
+                <span>49,99 €</span>
             </div>
-        </div>
-
-        
-<div style="margin-bottom: 20px;">
-    <input type="checkbox" id="terms" required>
-    <label for="terms" style="display: inline;">
-        Acepto los <a href="terminos.html" target="_blank">términos y condiciones</a>
-    </label>
-</div>
-
-        
-        <!-- Formulario -->
-        <div class="payment-form">
-            <h2>Datos de pago</h2>
-
-            <form>
-                <label>Nombre del titular</label>
-                <input type="text" placeholder="Nombre completo">
-
-                <label>Número de tarjeta</label>
-                <input type="text" placeholder="1234 5678 9012 3456">
-
-                <div class="row">
-                    <div>
-                        <label>Fecha de expiración</label>
-                        <input type="text" placeholder="MM/AA">
-                    </div>
-                    <div>
-                        <label>CVV</label>
-                        <input type="password" placeholder="123">
-                    </div>
-                </div>
-
-                <button type="submit">Pagar ahora</button>
-            </form>
-
-            <div class="secure">
-                🔒 Pago seguro cifrado SSL
-            </div>
-        </div>
-
-    </div>
-
-</body>
-</html>
+            <div class="summary-row">
+                <span>IVA (21%)</span>
